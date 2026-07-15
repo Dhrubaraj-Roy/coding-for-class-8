@@ -6,3 +6,6 @@ console.log("hello world!!!");
 let num = 10;
 console.log(num);
 
+//Undefined 
+let a;
+console.log(a);
