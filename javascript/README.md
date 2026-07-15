@@ -17,6 +17,8 @@ Materials and exercises for Class 8 JavaScript lessons.
 * **RAM vs. Secondary Memory**: Programs (like PUBG or YouTube) are stored in Secondary Memory and loaded into RAM when running.
 * **JavaScript Variables**: Declaring variables (like `let num = 10;`) allocates temporary storage space directly inside RAM.
 * **Undefined Variables**: If we declare a variable without assigning a value (e.g., `let a;`), it is stored in RAM with a default value of `undefined`. Printing it using `console.log(a);` will output `undefined`.
+* **Null vs. Undefined**: `undefined` means we forgot to set a value for a variable, while `null` means we intentionally set its value to be empty.
+
 
 
 
