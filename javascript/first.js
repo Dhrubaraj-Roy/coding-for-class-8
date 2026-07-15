@@ -1,4 +1,8 @@
 console.log("hello world!!!");
 
 
-//dec
+//declate the variable 
+
+let num = 10;
+console.log(num);
+
