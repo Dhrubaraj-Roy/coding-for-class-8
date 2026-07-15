@@ -12,7 +12,7 @@ Materials and exercises for Class 8 JavaScript lessons.
 
 ## 🧠 Memory Allocation (RAM vs. Secondary Memory)
 
-![Memory Allocation Diagram](memory-diagram.png)
+![Memory Allocation Diagram](asset/memory-diagram.png)
 
 * **RAM vs. Secondary Memory**: Programs (like PUBG or YouTube) are stored in Secondary Memory and loaded into RAM when running.
 * **JavaScript Variables**: Declaring variables (like `let num = 10;`) allocates temporary storage space directly inside RAM.
