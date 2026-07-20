@@ -100,3 +100,19 @@ console.log(10 % 20)
 console.log(22/4+34*2-44);
 
 
+console.log("Comparision Operator----------------")
+
+let a1 = 1;
+let a2 = 2;
+console.log()
+
+let num_x = 23
+let str_num = "23" 
+// ==
+console.log(num_x == str_num); // str_num will conver number 1st then compare 
+
+// ===
+//it will not convert type 
+// 1st type check then compare 
+console.log(num_x === str_num);
+console.log(undefined==null)
