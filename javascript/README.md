@@ -19,6 +19,18 @@ Materials and exercises for Class 8 JavaScript lessons.
 * **Undefined Variables**: If we declare a variable without assigning a value (e.g., `let a;`), it is stored in RAM with a default value of `undefined`. Printing it using `console.log(a);` will output `undefined`.
 * **Null vs. Undefined**: `undefined` means we forgot to set a value for a variable, while `null` means we intentionally set its value to be empty.
 
+### 🧱 Stack vs. Heap Memory (Inside RAM)
+RAM is divided into two main parts where JavaScript stores data:
+* **Stack Memory (for Primitive Data)**:
+  - Stored neatly one after another, like a stack of plates.
+  - Very fast to access.
+  - Used for simple/primitive data types (like numbers, strings, and booleans).
+* **Heap Memory (for Non-primitive Data)**:
+  - Stored in random empty spaces, like toys scattered around a room.
+  - Used for large/non-primitive data types (like arrays and objects).
+  - The Stack keeps a "room number" (reference) pointing to where the data is stored in the Heap.
+
+
 
 
 
