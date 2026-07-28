@@ -30,7 +30,8 @@ Object.defineProperty(obj, "bac_no", {
 // obj.bac_no = 4545454;
 // console.log(obj.bac_no);
 
-for (let i in obj){
-    console.log(i);
-}
+// for (let i in obj){
+//     console.log(i);
+// }
 
+console.log(Object.getOwnPropertyDescriptor(Object.prototype,"toString"))
