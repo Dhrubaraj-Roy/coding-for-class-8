@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+#title, #time {
+    text-align: center;
+    font-size: 50px;
+}
