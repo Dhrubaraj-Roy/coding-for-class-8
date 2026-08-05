@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#box {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #ae3939;
+    border-radius: 10px;
+    background-color: #e5e5f5;
+    text-align: center;
+}
+
+.quote-text{
+    font-style: italic;
+}
