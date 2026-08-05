@@ -31,4 +31,10 @@ function after_2sec(){
 
 }
 
-setInterval(after_2sec, 2000);
+const btn = document.getElementById('btn')
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        after_2sec();
+    }
+});
