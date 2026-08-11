@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(174, 210, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-div{
+    background-color: white;
+    width: 800px;
+    height: 400px;
+    margin: 30px;
+    
+}
+
+#one{
+    display: inline-block;
+    background-color: red;
+    width: 165px;
+    height: 153px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+
+}
+#two{
+    display: inline-block;
+    background-color: red;
+    width: 507px;
+    height: 153px;
+    margin-bottom: 60px;
+    margin-left: 64px;
+    
+}
+#three{
+    display: inline-block;
+    background-color: red;
+    width: 165px;
+    height: 153px;
+    margin-top: 30px;
+}
+#four{
+    display: inline-block;
+    background-color: red;
+    width: 507px;
+    height: 153px;
+    margin-top: 30px;
+    margin-left: 124px;
+}
+
+#txt{
+    color: red;
+}
