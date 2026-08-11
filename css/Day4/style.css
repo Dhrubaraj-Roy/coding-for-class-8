@@ -1,0 +1,22 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    width: 400px;
+    height:200px;
+    border-width: 2px;
+    border-color: red;
+    border-style: solid;
+    margin: 30px;
+    padding: 30px;
+    background-color: rgb(103, 212, 212);
+}
+
+.box:hover{
+    background-color: rgb(144, 231, 144);
+    transform: scale(1.3);
+}
