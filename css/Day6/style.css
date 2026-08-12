@@ -6,7 +6,7 @@ body{
 .container{
     background-color: aquamarine;
     height: 200px;
-    width: 800px;
+    width: 200%;
     margin-top: 300px;
     margin-left: 400px;
     
@@ -25,9 +25,9 @@ body{
 }
 .box2{
     background-color: rgb(79, 228, 49);
-    position: relative;
-    top: 20px;
-    left: 20px;
+    position: sticky;
+    top: 40px;
+    left: 40px;
 }
 .box3{
     background-color: rgb(195, 195, 47);
