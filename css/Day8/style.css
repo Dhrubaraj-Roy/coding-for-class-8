@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(231, 239, 246);
+}
+
+.card{
+    margin: 20px;
+    display: inline-block; 
+    cursor: pointer; 
+    border-radius: 20px;
+}
+.con1{
+    position: relative;
+}
+.offer-box{
+    color: white;
+    background-color: rgba(10, 56, 237, 0.783);
+    width: 40%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.offer{
+    margin-left: 10px;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px rgb(216, 212, 212);
+    background-color: white ;
+
+    
+}
+
+.con2{
+    position: relative;
+}
+.box{
+    display: inline-block;
+    margin-left: 7px ;
+}
+
+
+ 
+.img{
+    height: 250px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.res-name{
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 4px;
+    position: absolute;
+    right: 5px;
+}
+
+.con3{
+    position: relative;
+    margin-top: 5px;
+}
+
+.price{
+    position: absolute;
+    right: 5px;
+}
+
+.con4{
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.distance{
+    position: absolute;
+    right: 5px;
+}
+
+.gray{
+    color: gray;
+}
+
