@@ -1,0 +1,190 @@
+*{margin: 0;padding: 0;}
+
+
+
+.left-section{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+ 
+
+
+}
+
+.bookmyshow{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1.8rem;
+}
+
+.txt{
+    color: white;
+}
+.btn{
+    border: none;
+    background-color: red;
+    padding: 1rem;
+    margin-top: 1.8rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.right-section{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0rem;
+}
+
+.search{
+    width: 300px;
+    padding: 0.7rem;
+    font-size: 15px;
+    color: red;
+
+}
+
+.search-btn{
+    background-color: red;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 0.7rem;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+
+}
+
+.hero{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('./assets/hero.png');
+    
+;
+}
+
+.hero-txt{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+   
+    
+}
+
+.hero-btn{
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    
+}
+
+
+.txt-div{
+    display: flex;
+    justify-content: center;
+
+}
+.content-txt{
+    font-size: 40px;
+    
+}
+
+.movies{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0rem 12rem 0rem 12rem;
+    overflow-x: scroll;
+    
+}
+
+
+.card, .card-btn{
+    height: 400px;
+    width: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+   
+}
+
+.card-img, img{ 
+    height: 360px;
+    width: 235px;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+
+.des{
+    color: gray;
+}
+
+.foter{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foter-img{
+    width: 80%;
+    height: inherit;
+    margin-top: 20px ;
+}
+
+@media (max-width:615px){
+    .left-section{
+        flex-direction: column;
+        align-items: center; 
+
+
+   
+    
+        }
+
+    .btn{
+        display: flex;
+        align-items: center;
+        margin: .1rem;
+        padding: .6rem;
+    }
+
+    .movies{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+         margin: 1rem;               /* small 1rem margin instead of 12rem */
+        overflow-x: auto;           /* smooth horizontal scroll */
+        gap: 15px;
+        width: auto;
+    }
+     .card {
+        flex-shrink: 0;             /* prevents card from squishing */
+        margin-left: 0;
+    }
+ 
+    
+ 
+
+
+}
