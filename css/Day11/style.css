@@ -1,0 +1,52 @@
+.container{
+    background-color: rgb(244, 253, 212);
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    /* align-items:baseline; */
+    /* flex-wrap:  wrap; */
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    border: 2px solid;
+    border-color: black;
+    margin: 5px;
+    height: 150px;
+    width: 150px;
+}
+.box1{
+    background-color: rgb(93, 255, 109);
+    /* order: 2; */
+    /* align-self: flex-start; */
+}
+.box2{
+    background-color: rgb(93, 168, 255);
+    /* flex-grow: 1; */
+    /* flex-shrink: 2; */
+    /* flex-basis: 300px; */
+}
+.box3{
+    background-color: rgb(236, 255, 93);
+    /* flex-grow: 2; */
+    /* flex-shrink: 7; */
+    /* flex: 0 2 900px; */
+}
+.box4{
+    background-color: rgb(255, 93, 193);
+    /* order: -1; */
+    /* align-self: flex-start; */
+}
+
+
+/* if screen size 600px or less than that the screen got black and all boxes color are white  */
+@media(max-width:600px){
+
+    .container{
+        background-color: black;
+    }
+    .box{
+        background-color: white;
+    }
+}
