@@ -1,0 +1,21 @@
+.name{
+    /* color: red;
+    background-color: aqua;
+    text-align: justify; */
+
+    /* direction:rtl;
+    unicode-bidi:bidi-override; */
+    font-size: 70px;
+    
+
+}
+
+.name:hover{
+    text-shadow: 8px 8px 2px rgb(99, 96, 96);
+    transition-property: text-shadow;
+    transition-duration: 3s;
+    transition-timing-function:ease-in-out;
+    
+    
+
+}
