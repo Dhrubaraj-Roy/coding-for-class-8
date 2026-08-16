@@ -1,0 +1,34 @@
+body{
+    background-color: aqua;
+}
+
+.board{
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chessboard{
+    
+    background-color: brown;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    
+    
+
+}
+
+.white,
+.black {
+    height: 4vw;
+    width: 4vw;
+}
+
+.white{
+    background-color: rgb(255, 255, 255);
+}
+
+.black{
+    background-color: black;
+}
