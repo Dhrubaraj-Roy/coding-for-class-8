@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+}
+
+.con{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    
+}
+
+.box{
+    background-color: rgb(255, 213, 0);
+    height: 200px;
+    width: 200px;
+    /* margin-left: 200px; */
+    font-size: 2rem;
+    animation-name: dhruba2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-direction:alternate; */
+    /* position: relative; */
+}
+
+@keyframes dhruba {
+    from{
+        /* left:0px; */
+        transform: translate(0px,0px);
+        
+
+    }
+    to{
+        /* top:0px;
+        left: 900px;
+        background-color: red; */
+        transform: translate(1000px,400px);
+
+
+    }
+    
+}
+
+@keyframes dhruba2 {
+    0%{
+        transform: translate(0vw,0vw);
+
+    }
+    25%{
+        transform: translate(40vw, -40vh);
+    }
+    50%{
+        transform: translate(90vw, 0vh);
+    }
+    75%{
+        transform: translate(40vw, 40vh);
+    }
+    100%{
+        transform: translate(0vw, 0vh);
+
+    }
+    
+}
+
+

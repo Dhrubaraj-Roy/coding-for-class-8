@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit{
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+
+.sun{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: orange;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* shifts it back by half its own size */
+
+}
+
+.marcury{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(252, 172, 172);
+    animation-name: marcury;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+}
+
+
+@keyframes marcury {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) translateX(150px);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg) translateX(150px) ;
+    }
+}
+
+.mar-bordar{
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 300px;
+
+}
+
+.venus{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgb(147, 165, 86);
+    animation-duration: 9s;
+    animation-name: venus;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+}
+
+@keyframes venus {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) translateX(250px);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg) translateX(250px) ;
+    }
+}
+
+.v-bordar{
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+
+}
+
+
+.earth{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(15, 79, 239);
+    animation-name: earth;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+.e-bordar{
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 600px;
+
+}
+
+
+@keyframes earth {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) translateX(300px);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg) translateX(300px) ;
+    }
+}
+
+
+.mars{
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-color: rgb(127, 90, 168);
+    animation-name: mars;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+}
+
+.m-bordar{
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 900px;
+    width: 900px;
+
+}
+
+@keyframes mars {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) translateX(450px);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg) translateX(450px) ;
+    }
+}
+
+.jupiter{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: gray;
+    animation-name: jupiter;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+}
+
+
+.j-bordar{
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1060px;
+    width: 1060px;
+
+}
+
+
+
+@keyframes jupiter {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg) translateX(530px);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg) translateX(530px) ;
+    }
+}
+    
