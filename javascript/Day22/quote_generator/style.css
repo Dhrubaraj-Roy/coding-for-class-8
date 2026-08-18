@@ -1,0 +1,47 @@
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container{
+    background-color: rgba(35, 122, 137, 0.398);
+    height: 400px;
+    width: 800px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.txt{
+    font-size: 40px;
+    text-align: center;
+}
+
+#quote{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#quoteBtn{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(40, 78, 232);
+    border-radius: 5px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    border-color: black;
+    border-style:double;
+
+}
+
+
+/* 700-150 = 525 / 2 = 262.5 */
