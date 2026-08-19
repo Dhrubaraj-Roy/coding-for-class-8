@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root">
+        <h2>JavaScript Quiz</h2>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the correct way to declare a variable in JavaScript?</p>
+            <label><input type="radio" name="q1" value="a"> var myVar = 10;</label>
+            <label><input type="radio" name="q1" value="b"> variable myVar = 10;</label>
+            <label><input type="radio" name="q1" value="c"> v myVar = 10;</label>
+            <label><input type="radio" name="q1" value="d"> declare myVar = 10;</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Which method is used to display output in the browser console?</p>
+            <label><input type="radio" name="q2" value="a"> print()</label>
+            <label><input type="radio" name="q2" value="b"> console.log()</label>
+            <label><input type="radio" name="q2" value="c"> display()</label>
+            <label><input type="radio" name="q2" value="d"> write()</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What does the <code>===</code> operator do in JavaScript?</p>
+            <label><input type="radio" name="q3" value="a"> Assigns a value</label>
+            <label><input type="radio" name="q3" value="b"> Compares value only</label>
+            <label><input type="radio" name="q3" value="c"> Compares both value and type</label>
+            <label><input type="radio" name="q3" value="d"> None of the above</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Which of the following is NOT a JavaScript data type?</p>
+            <label><input type="radio" name="q4" value="a"> String</label>
+            <label><input type="radio" name="q4" value="b"> Boolean</label>
+            <label><input type="radio" name="q4" value="c"> Float</label>
+            <label><input type="radio" name="q4" value="d"> Undefined</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. What will <code>typeof null</code> return in JavaScript?</p>
+            <label><input type="radio" name="q5" value="a"> "null"</label>
+            <label><input type="radio" name="q5" value="b"> "undefined"</label>
+            <label><input type="radio" name="q5" value="c"> "object"</label>
+            <label><input type="radio" name="q5" value="d"> "number"</label>
+        </div>
+
+        <button id="submitBtn">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
