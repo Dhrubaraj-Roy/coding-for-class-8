@@ -6,7 +6,7 @@ A CSS practice project creating the national flag of Finland using pure HTML and
 
 ## 📸 Output
 
-![Finland Flag Output](output.png)
+![Finland Flag Output](assets/output.png)
 
 ---
 
