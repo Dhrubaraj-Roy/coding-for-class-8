@@ -101,9 +101,11 @@ const questionBank = [
     }
 ];
 
+
+//v1 of randomQuestions function 
+// time complexcity O(n)
+
 // function randomQuestions(){
-
-
 //     const data = new Set();
 //     while(data.size != 5){
 //         const index = Math.floor(Math.random()*questionBank.length);
@@ -113,12 +115,27 @@ const questionBank = [
 //     return Array.from(data);
 // }
 
-//v2 of randomQuestions function
-function randomQuestions() {
-    const shuffled = [...questionBank].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 5);
-}
 
+//v2 of randomQuestions function 
+// but the time complexcity is bekar nlog(n)
+
+// function randomQuestions() {
+//     const shuffled = [...questionBank].sort(() => Math.random() - 0.5);
+//     return shuffled.slice(0, 5);
+// }
+
+
+//v3 
+
+
+function randomQuestions() {
+    const arr = [...questionBank];
+    for (let i = arr.length - 1; i > arr.length - 6; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr.slice(-5);
+}
 
 
 const form = document.getElementById("quizeForm");
