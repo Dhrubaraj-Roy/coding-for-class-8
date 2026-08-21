@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroTalk – Your Future Awaits ✨</title>
+    <meta name="description" content="Discover your zodiac sign and get personalized future predictions based on your birth date and cosmic alignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars" id="stars"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <h1>AstroTalk</h1>
+            </div>
+            <p class="tagline">Unlock the secrets the stars hold for your future</p>
+        </header>
+
+        <!-- Form Card -->
+        <div class="card" id="formCard">
+            <div class="card-glow"></div>
+            <h2 class="card-title">
+                <span class="sparkle">🔮</span> Enter Your Details
+            </h2>
+            <p class="card-subtitle">Tell us about yourself and the cosmos will reveal your path</p>
+
+            <form id="astroForm">
+                <!-- Full Name -->
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">👤</span>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="input-group" id="div-dob">
+                    <label for="dob">Date of Birth</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">📅</span>
+                        <input type="date" id="dob" required>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="input-group" id="">
+                    <label>Gender</label>
+                    <div class="gender-selector">
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        <label for="male" class="gender-option">
+                            <span class="gender-icon">♂</span>
+                            <span>Male</span>
+                        </label>
+
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female" class="gender-option">
+                            <span class="gender-icon">♀</span>
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Reveal My Future</span>
+                    <span class="btn-icon">✨</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Loading Animation -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="crystal-ball">
+                <div class="crystal-ball-inner"></div>
+                <div class="crystal-ball-shine"></div>
+            </div>
+            <p class="loading-text">Reading the stars for you<span class="dots">...</span></p>
+        </div>
+
+        <!-- Result Div -->
+        <div id="resultCard" class="result-box"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
