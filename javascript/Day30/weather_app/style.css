@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: rgba(0, 0, 255, 0.312);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    height: 800px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    background-color: rgba(183, 112, 241, 0.584);
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;    
+
+}
+
+.input, .txt, .btn, .result{
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+h2{
+    font-size: 40px;
+}
+.inp{
+   font-size: 20px;
+}
+
+.button{
+    background-color: rgba(78, 78, 221, 0.749);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
