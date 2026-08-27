@@ -14,14 +14,36 @@
         <div id="alcohol">Serve Alcohol</div>
         <div id="open">Open Now</div>
     </div>
-
+     <!-- Filter options popup -->
+      <div id="filterPopup" class="hidden">
+        <h3>Choose Filter</h3>
+        <div class="filterOption">
+            <input type="radio" id="sortByRating" name="filterOption" value="rating">
+            <label for="sortByRating">Sort by Rating</label>
+        </div>
+        <div class="filterOption">
+            <input type="radio" id="sortHighToLow" name="filterOption" value="highLow">
+            <label for="sortHighToLow">High to Low (Price)</label>
+        </div>
+        <div class="filterOption">
+            <input type="radio" id="costOption" name="filterOption" value="costLowHigh">
+            <label for="costOption">Cost: Low to High</label>
+        </div>
+        <div class="filterOption">
+            <input type="radio" id="distanceOption" name="filterOption" value="distance">
+            <label for="distanceOption">Distance</label>
+        </div>
+        <button id="applyFilter">Apply</button>
+        <button id="closeFilter">Close</button>
+    </div>
+     
+    
     <!-- insert all the cart here -->
      <div id="root">
-        
+
      </div>
 
 
-    <script src="data/data.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

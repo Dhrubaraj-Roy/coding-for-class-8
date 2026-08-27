@@ -1,6 +1,6 @@
 const resturent = [
   {
-    "image": "ten",
+    "image": "one",
     "restaurant_name": "The Spice House",
     "rating": 2,
     "food_type": "Mexican",
@@ -13,7 +13,7 @@ const resturent = [
     "close_time": "10:00 AM"
   },
   {
-    "image": "ten",
+    "image": "two",
     "restaurant_name": "The Hungry Fork",
     "rating": 4,
     "food_type": "Vietnamese",
@@ -26,7 +26,7 @@ const resturent = [
     "close_time": "9:00 PM"
   },
   {
-    "image": "ten",
+    "image": "three",
     "restaurant_name": "The Green Leaf",
     "rating": 2,
     "food_type": "Vietnamese",
@@ -39,7 +39,7 @@ const resturent = [
     "close_time": "12:00 AM"
   },
   {
-    "image": "eight",
+    "image": "four",
     "restaurant_name": "The Hungry Fork",
     "rating": 1,
     "food_type": "Italian",
@@ -52,7 +52,7 @@ const resturent = [
     "close_time": "9:00 PM"
   },
   {
-    "image": "ten",
+    "image": "five",
     "restaurant_name": "Royal Kitchen",
     "rating": 4,
     "food_type": "French",
@@ -65,7 +65,7 @@ const resturent = [
     "close_time": "2:00 AM"
   },
   {
-    "image": "nine",
+    "image": "six",
     "restaurant_name": "Royal Kitchen",
     "rating": 1,
     "food_type": "Korean",
@@ -78,7 +78,7 @@ const resturent = [
     "close_time": "11:00 PM"
   },
   {
-    "image": "one",
+    "image": "seven",
     "restaurant_name": "Taste of India",
     "rating": 5,
     "food_type": "Korean",
@@ -91,7 +91,7 @@ const resturent = [
     "close_time": "10:00 AM"
   },
   {
-    "image": "six",
+    "image": "eight",
     "restaurant_name": "Taste of India",
     "rating": 3,
     "food_type": "Middle Eastern",
