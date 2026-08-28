@@ -1,11 +1,10 @@
 const name = "dhruba";
-const age = 30;
+const age = 100;
 
 function greet() {
-  console.log(`Namaskar, amr naam is ${name} abong amr boyos ${age} bachor .`);
+  console.log(`helloooo, my name is ${name}`);
 }
 
 greet();
 
-console.log("update_func try to create merge");
-console.log("update_func try to create merge conflict");
+console.log("I am from main");
