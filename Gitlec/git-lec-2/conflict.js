@@ -7,4 +7,5 @@ function greet() {
 
 greet();
 
+console.log("update_func try to create merge");
 console.log("update_func try to create merge conflict");
