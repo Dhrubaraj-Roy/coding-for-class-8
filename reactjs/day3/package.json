@@ -1,0 +1,16 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "we have been building a production ready react proejct",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
