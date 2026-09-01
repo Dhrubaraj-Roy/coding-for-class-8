@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Component/Header";
-import Card from "./Component/Card";
+import Header from "./Component/Header.jsx";
+import Card from "./Component/Card.jsx";
 import arr from "./utils/dummy.jsx"; 
 
 function App() {
