@@ -98,3 +98,43 @@
   height: 22px;
   display: block;
 }
+
+.price-btn{
+  border: none;
+  background-color: white;
+  margin-right: 5px;
+  margin-left: 50px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+.filter-btn{
+  border: none;
+  background-color: white;
+  margin-right: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+.p-btn{
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: 60px;
+}
