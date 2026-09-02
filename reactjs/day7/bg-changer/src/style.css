@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+
+}
+
+#root{
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.btn{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-color: black;
+    border-width: 2px;}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+    color: black;
+}
+
+.purple{
+    background-color: purple;
+    color: white;
+} 
