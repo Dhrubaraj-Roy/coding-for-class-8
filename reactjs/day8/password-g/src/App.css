@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.App{
+    background-color:black;
+    color: white;
+    width: 700px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.fun{
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+}
+
+input[type="range"] {
+  width:400px;
+}
