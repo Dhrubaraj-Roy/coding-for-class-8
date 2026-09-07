@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container{
+    background-color: rgb(238, 233, 224);
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+h2{
+    color: rgb(26, 25, 25);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
