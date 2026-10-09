@@ -1,3 +1,19 @@
+// const express = require("express")
+// const app = express()
+
+// app.get('/about/:username', (req, res) => {
+//     const {username} = req.params
+//     res.send(`About ${username}`)
+// })
+// app.get('/contact', (req, res)=>{
+//     res.send("this is contact page ")
+// })    
+
+// app.get("/", (req, res) => {
+//     res.send("Home page")
+// })
+
+
 const express = require("express")
 
 const app = express()
@@ -29,24 +45,25 @@ app.post("/book", (req, res)=>{
     res.send("Book added successfully")
 })
 
+app.delete('/book/:id', (req, res) => {
+  const bookID = parseInt(req.params.id);
+  const index = BookStore.findIndex(book => book.id === bookID);
+
+  if (index !== -1) {
+    BookStore.splice(index, 1);
+    return res.status(200).json({ message: 'Book deleted successfully', BookStore });
+  } else {
+    return res.status(404).json({ message: 'Book not found' });
+  }
+});
+
+console.log(BookStore)
 
 
 
 
-// const express = require("express")
-// const app = express()
 
-// app.get('/about/:username', (req, res) => {
-//     const {username} = req.params
-//     res.send(`About ${username}`)
-// })
-// app.get('/contact', (req, res)=>{
-//     res.send("this is contact page ")
-// })    
 
-// app.get("/", (req, res) => {
-//     res.send("Home page")
-// })
 
 app.listen(4000, () => {
     console.log("Server started on port 4000")
