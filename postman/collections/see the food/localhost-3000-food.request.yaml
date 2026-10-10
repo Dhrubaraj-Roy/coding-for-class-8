@@ -1,0 +1,12 @@
+$kind: http-request
+name: localhost:3000/food
+description: ""
+url: localhost:3000/admin
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id":20, "food":"dahi", "category":"veg", "price":200
+    }
+order: 1000
