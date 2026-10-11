@@ -22,6 +22,8 @@ const FoodMenu = [
     {id:16, food:"Mushroom", category:"veg", price:700},
 ]
 
+const AddtoCart = [];
+
 
 
 app.get('/food', (req, res)=>{
@@ -29,21 +31,31 @@ app.get('/food', (req, res)=>{
 })
 
 app.post('/admin',Auth, (req, res)=>{
-    FoodMenu.push(req.body);
-    res.status(201).send("Item Added Succesfully");
+    try{
+        FoodMenu.push(req.body);
+        res.status(201).send("Item Added Succesfully");
+    }
+    catch(err){
+        res.send(err);
+    }
 })
 
 app.delete('/admin/:id',Auth, (req, res)=>{
 
-    const id = parseInt(req.params.id);
+    try{
+        const id = parseInt(req.params.id);
 
-    const index = FoodMenu.findIndex(item => item.id ===id);
+        const index = FoodMenu.findIndex(item => item.id ===id);
 
-    if(index===-1)
-        res.send("Item Doesn't Exist");
-    else{
-        FoodMenu.splice(index,1);
-        res.send("Succesfully Deleted");
+        if(index===-1)
+            res.send("Item Doesn't Exist");
+        else{
+            FoodMenu.splice(index,1);
+            res.send("Succesfully Deleted");
+        }
+    }
+    catch(err){
+        res.send(err);
     }
 
 })
@@ -68,6 +80,54 @@ app.patch('/admin',Auth, (req, res)=>{
         else{
             res.send("Item not exist")
         }
+
+
+})
+
+
+app.post("/user/:id", (req, res)=>{
+    try{
+        const id = parseInt(req.params.id);
+        const foodIteam = FoodMenu.find(iteam=> iteam.id===id);
+        if(foodIteam){
+            AddtoCart.push(foodIteam);
+            res.status(200).send("Iteam added sucessfully")
+        }
+        else{
+            res.send("out of stoke");
+        }
+    }
+    catch(err){
+        res.send(err);
+    }
+
+})
+
+app.delete("/user/:id", (req, res)=>{
+    try{
+        const id = parseInt(req.params.id);
+        const dltIteam = AddtoCart.findIndex(iteam=>iteam.id===id);
+        if(dltIteam!==-1){
+            AddtoCart.splice(dltIteam,1);
+            res.send("Iteam removed sucessfully");
+        }
+        else{
+            res.send("Iteam is not present in cart");
+        }
+    }    
+    catch(err){
+        res.send("some error" + err)
+    }
+    
+})
+
+app.get("/user", (req, res)=>{
+    if(AddtoCart.length===0){
+        res.send("Cart is empty");
+    }
+    else{
+        res.send(AddtoCart);
+    }
 
 
 })
