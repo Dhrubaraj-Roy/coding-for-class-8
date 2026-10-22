@@ -1,1 +1,4 @@
 reactjs/day16/web3/vite.config.js
+.env
+*.env
+node_modules/
