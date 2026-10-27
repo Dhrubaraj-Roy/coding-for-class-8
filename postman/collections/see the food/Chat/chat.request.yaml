@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: localhost:3000/chat
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "id":"123",
+        "msg":"Hey How are you?"
+    }
+order: 1000

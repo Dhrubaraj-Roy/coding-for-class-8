@@ -1,0 +1,6 @@
+$kind: http-request
+name: localhost:3000/auth/logout
+description: ""
+url: localhost:3000/auth/logout
+method: POST
+order: 3000

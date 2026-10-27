@@ -1,0 +1,5 @@
+$kind: http-request
+description: ""
+url: localhost:3000/user/user
+method: GET
+order: 2000
