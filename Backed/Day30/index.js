@@ -7,10 +7,10 @@ const client = new OpenAI({
     baseURL: "https://api.groq.com/openai/v1",
 });
 
-async function callLLM(prompt) {
+async function callLLM(input) {
     const response = await client.responses.create({
         model: "openai/gpt-oss-20b",
-        input: prompt,
+        input: input,
     });
     return response.output_text;
 }
@@ -71,7 +71,13 @@ async function chatting(userPrompt) {
         parts: [{ text: userPrompt }]
     });
 
-    // 2. Ask the LLM to extract city name(s) and date(s)
+    // 2. Format history into { role, content } for the OpenAI/Groq API
+    const messages = history.map((item) => ({
+        role: item.role === "model" ? "assistant" : "user",
+        content: item.parts[0].text
+    }));
+
+    // 3. Ask the LLM to extract city name(s) and date(s)
     const todayDate = new Date().toISOString().split("T")[0];
 
     const extractionPrompt = `
@@ -103,7 +109,7 @@ User Message: "${userPrompt}"
 
     let finalReply = "";
 
-    // 3. If weather locations were found, fetch weather and generate friendly advice
+    // 4. If weather locations were found, fetch weather and generate friendly advice
     if (Array.isArray(locations) && locations.length > 0) {
         const weatherReports = await Promise.all(
             locations.map((loc) => getWeather(loc.city, loc.date))
@@ -119,22 +125,21 @@ User Message: "${userPrompt}"
             })
             .join("; ");
 
-        const advicePrompt = `
-User question: "${userPrompt}"
-Fetched weather data: ${weatherSummary}
+        const weatherMessages = [
+            ...messages.slice(0, -1),
+            {
+                role: "user",
+                content: `User question: "${userPrompt}"\nFetched weather data: ${weatherSummary}\n\nInstructions: State the temperature and condition clearly for each city, and give friendly advice (e.g., if hot or rainy, suggest staying inside, enjoying chai and pakoras, or staying hydrated).`
+            }
+        ];
 
-Instructions:
-- State the temperature and weather condition for each city clearly.
-- Give caring and fun advice based on the weather (e.g., if hot or rainy, suggest staying inside, enjoying chai and pakoras, or staying hydrated).
-`;
-
-        finalReply = await callLLM(advicePrompt);
+        finalReply = await callLLM(weatherMessages);
     } else {
-        // Normal conversation if no weather location was asked
-        finalReply = await callLLM(userPrompt);
+        // Normal conversation: pass full history so AI remembers past context
+        finalReply = await callLLM(messages);
     }
 
-    // 4. Save AI response into conversation history
+    // 5. Save AI response into conversation history
     history.push({
         role: "model",
         parts: [{ text: finalReply }]
