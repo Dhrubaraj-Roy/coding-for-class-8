@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 450px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            height: 550px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 16px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #chat-messages {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #fafafa;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 12px;
+            border-top: 1px solid #e0e0e0;
+            background: #ffffff;
+            gap: 8px;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        #message-input:focus {
+            border-color: #007bff;
+        }
+
+        #send-btn {
+            padding: 10px 18px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        #send-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .room-container {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            gap: 8px;
+        }
+
+        #room-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        #room-input:focus {
+            border-color: #007bff;
+        }
+
+        #join-btn {
+            padding: 8px 14px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        #join-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #join-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Chat App</h1>
+        </header>
+
+        <div class="room-container">
+            <input type="text" id="room-input" placeholder="Enter the room ID.">
+            <button onclick="joinRoom()" id="join-btn">Joining Room</button>
+        </div>
+
+        <div id="chat-messages"></div>
+
+        <div class="input-container">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button onclick="sendMessage()" id="send-btn">Send</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    const socket = io();
+    
+    const messageBox = document.getElementById('chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const roomInput = document.getElementById('room-input');
+    const joinBtn = document.getElementById('join-btn');
+    let roomId = '';
+
+    function joinRoom(){
+        const room = roomInput.value.trim();
+        if(!room) return;
+
+        roomId = room;
+        socket.emit('join-room', room);
+
+        joinBtn.disabled = true;
+        roomInput.style.display = 'none';
+
+        const text = document.createElement('span');
+        text.textContent = `You already joined the room of ID = ${room}'s`;
+        text.style.flex = '1';
+        text.style.fontSize = '14px';
+        text.style.color = '#333';
+        roomInput.parentNode.insertBefore(text, joinBtn);
+    }
+
+    function sendMessage(){
+        const msg = messageInput.value;
+        // socket.emit('message',msg);
+        socket.emit('message',{room:roomId,msg});
+        const element = document.createElement('div');
+        element.textContent = msg;
+        element.style.textAlign = 'right';
+        messageBox.appendChild(element);
+        messageInput.value = '';
+    }
+
+    socket.on('new-message', (data) => {
+        const element = document.createElement('div');
+        element.textContent = data;
+        messageBox.appendChild(element);
+    });
+    </script>
+</body>
+
+</html>
