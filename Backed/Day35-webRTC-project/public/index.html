@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Video Chat</h1>
+        </header>
+
+        <!-- Video stream area -->
+        <div class="videos-container">
+            <div class="video-box">
+                <span class="video-tag">My Video (Local)</span>
+                <video id="localVideo" autoplay muted playsinline></video>
+            </div>
+            <div class="video-box">
+                <span class="video-tag">Remote Client Video</span>
+                <video id="remoteVideo" autoplay playsinline></video>
+            </div>
+        </div>
+
+        <!-- Incoming Call Notification (Hidden by default, shown when incoming call arrives) -->
+        <div class="incoming-call-box" id="incomingCall" style="display: none;">
+            <span class="incoming-call-title">Incoming Video Call...</span>
+            <div class="incoming-call-actions">
+                <button id="acceptCall" class="btn btn-accept" disabled>Accept Call</button>
+                <button id="rejectCall" class="btn btn-reject" disabled>Reject Call</button>
+            </div>
+        </div>
+
+        <!-- Call & Camera Controls -->
+        <div class="controls-container">
+            <button id="startCamera" class="btn btn-primary">Start camera</button>
+            <button id="startCall" class="btn btn-start">Start call</button>
+            <button id="endCall" class="btn btn-danger" disabled>End call</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #f1f5f9;
+}
+
+/* Videos layout */
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.video-box {
+    position: relative;
+    background: #090d16;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000;
+}
+
+/* Mirror local video for natural selfie view */
+#localVideo {
+    transform: scaleX(-1);
+}
+
+.video-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 2;
+}
+
+/* Incoming Call Banner (Hidden by default until call arrives) */
+.incoming-call-box {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(67, 56, 202, 0.3));
+    border: 1px solid #4338ca;
+    border-radius: 12px;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.incoming-call-box.active {
+    display: flex;
+}
+
+.incoming-call-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e0e7ff;
+}
+
+.incoming-call-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Action & Control Buttons */
+.controls-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(40%);
+}
+
+/* Button Variants */
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.btn-start, .btn-accept {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.btn-start:hover:not(:disabled), .btn-accept:hover:not(:disabled) {
+    background-color: #15803d;
+}
+
+.btn-danger, .btn-reject {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.btn-danger:hover:not(:disabled), .btn-reject:hover:not(:disabled) {
+    background-color: #b91c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 20px;
+    }
+
+    .incoming-call-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .incoming-call-actions, .controls-container {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .incoming-call-actions .btn, .controls-container .btn {
+        flex: 1;
+        text-align: center;
+    }
+}
